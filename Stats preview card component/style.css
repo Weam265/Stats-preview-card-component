@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    background-color: hsl(233, 47%, 7%);
+    width: 100vw;
+    height: 100vh;
+    color: white;
+}
+
+/* css for container will contain whole page */
+.container {
+    width: 1400px;
+    height: 500px;
+    display: flex;
+    margin: 210px auto;
+    flex-direction: row-reverse;
+    position: relative;
+}
+
+/* css for div that contains the image section */
+.container .image_section {
+    width: 700px;
+    height: 500px;
+    position: relative;
+}
+
+.container .overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(174, 107, 237, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+ /* Styling for the container of balls */
+.container .balls {
+    position: relative;
+    margin-top: 100px;
+}
+/* Styling for a ball */
+.balls .ball{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+@keyframes move1 {
+    0% { transform: translate(100px, -100px) scale(1); } 
+    25% { transform: translate(-150px, 150px) scale(.8);} 
+    50% { transform: translate(-200px, -200px) scale(1.2);}
+    75% { transform: translate(250px, 250px) scale(.8); }
+    100% { transform: translate(-100px, 100px)scale(1);}
+}
+@keyframes move2 {
+    0% { transform: translate(-100px, 100px);}
+    25% { transform: translate(150px, -150px);}
+    50% { transform: translate(200px, 200px);}
+    75% { transform: translate(-250px, -250px);}
+    100% { transform: translate(100px, -100px);}
+}
+@keyframes move3 {
+    0% { transform: translate(-200px, 200px);}
+    25% { transform: translate(150px, -100px) scale(.5);} 
+    50% { transform: translate(200px, -100px) scale(1);}  
+    75% { transform: translate(250px, -300px) scale(.5);}
+    100% { transform: translate(100px, -100px);}
+}
+.ball:nth-child(1) {
+    animation: move1 8s linear infinite alternate;
+    background-color: #f00;
+    -webkit-animation: move1 s linear infinite alternate;
+}
+.ball:nth-child(2) {
+    animation: move2 5s linear infinite alternate;
+    background-color: rgb(251, 255, 0);
+}
+.ball:nth-child(3) {
+    animation: move3 7s linear infinite alternate;
+    background-color: rgb(0, 255, 153);
+}
+.ball:nth-child(4) {
+    animation: move1 6s linear infinite alternate;
+    background-color: rgb(228, 57, 197);
+}
+.ball:nth-child(5) {
+    animation: move3 6s linear infinite alternate;
+    background-color: rgb(57, 68, 228);
+    -webkit-animation: move3 6s linear infinite alternate;
+}
+
+/* css for header-desktop image */
+.image_section img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* css for text section */
+.container .text_section {
+    width: 700px;
+    height: 500px;
+    background-color: rgb(6, 15, 53);
+}
+
+/* css for h1 the first element in text section*/
+.container .text_section h1 {
+    color: white;
+    font-size: 37px;
+    margin: 100px auto 30px auto;
+    width: 70%;
+    line-height: 1.3;
+    text-align: left;
+    padding-left: 60px;
+}
+
+.container .text_section .insights {
+    color: hsl(277, 64%, 61%);
+    font-size: 37px;
+
+}
+
+.container .text_section p {
+    color: rgb(202, 202, 202);
+    font-size: 18px;
+    width: 90%;
+    font-weight: 300;
+    line-height: 1.6;
+    padding-left: 60px;
+    margin: 0px 100px;
+    text-align: left;
+    font-weight: bold;
+}
+
+/* css for all itemes that contains three items */
+.container .text_section .items {
+    display: flex;
+    width: 100%;
+    line-height: 1.7;
+    margin: 50px auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 158px;
+    color: rgb(116, 112, 112);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.container .text_section .items h4 {
+    color: rgb(234, 225, 225);
+    font-size: 25px;
+}
